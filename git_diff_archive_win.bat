@@ -20,7 +20,7 @@ if "%2" EQU "" (
 :: `git diff`がファイル名を改行で区切って出力するため`for in do`で1行ずつ読まれることになるので文字連結する。変数展開の問題で連結処理はサブルーチン化して実現
 for /F "usebackq tokens=* delims=" %%A in (`git diff --diff-filter=ACMRTUXB --name-only %COMMIT_ID2% %COMMIT_ID1%`) do call :diffListJoin %%A
 
-:: 出力するzioファイル名に必要な情報をセットアップ
+:: 出力するzipファイル名に必要な情報をセットアップ
 for /F "usebackq tokens=* delims=" %%A in (`git rev-parse --show-toplevel`) do call :setBasename %%A
 set FORMATTED_DATE=%DATE:~0,4%%DATE:~5,2%%DATE:~8,2%
 set FORMATTED_TIME=%TIME: =0%
