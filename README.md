@@ -20,4 +20,22 @@ sh ファイルまでのフルパスに続けてパラメータを付与する(�
 C:\hoge\test.sh $SHA
 ```
 
-※実行環境によってはパスは UNIX 形式でないといけない可能性有り(内蔵 Git を使用している場合は Windows 形式で大丈夫)
+※実行環境によってはパスは UNIX 形式でないといけない可能性有り(内蔵 Git に同梱されている Git Bash を使用している場合は Windows 形式で大丈夫)
+
+# Windows 版で PowerShell を使用する場合
+
+### 実行するスクリプト
+
+powershell.exe までのフルパスを指定する(下記は例)
+
+```
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+```
+
+### パラメータ
+
+ps1 ファイルまでのフルパスに続けてパラメータを付与する(下記は例)
+
+```
+C:\hoge\test.ps1 $SHA
+```
